@@ -38,11 +38,32 @@ else{
 
 }
 
+
+async function sold(e) {
+
+e.preventDefault()
+let request=await fetch(`/api/sellone?id=${item.itemid}`,{
+  method:"get",
+  headers:{
+    "content-type":"application/json"
+  }
+})
+
+let response=await request.json()
+if(response.status==true){
+  alert("solf")
+}
+else {
+  alert("error")
+}
+
+}
+
+
 return (
   <div>
   <div className="container  rounded">
   <div className="">
-
    <form onSubmit={handleSubmit} className="form">
   
      
@@ -78,7 +99,8 @@ return (
      </td>
 
    <td>
-   <button type="submit"  className="badge btn-warning">update</button>
+   <button type="button"  className="badge btn-warning">update</button>
+   <button type="button" className="badge btn-primary" onClick={(e)=>sold(e)}>Sold</button>
    </td>
 
  </tr>
@@ -87,9 +109,8 @@ return (
         
      
   </form>
+ 
   
-
-
   </div>
  </div>
  </div>

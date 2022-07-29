@@ -1,6 +1,7 @@
 import Plot from 'react-plotly.js';
 
-export default function Charrt() {
+export default function Charrt(obj) {
+
 
 
 return (
@@ -9,15 +10,15 @@ return (
 
 <Plot
         data={[
+          
           {
-            x: [1, 2, 3],
-            y: [2, 6, 3],
-            type: 'bar',
-            mode: 'lines+markers',
-            marker: {color: 'red'},
+            values: [obj.itemsininventory,obj.itemssold],
+            labels: ['Inventory', 'Sold'],
+            type: 'pie'
           },
+          
         ]}
-        layout={ {width: 300, height: 240, title: 'A Fancy Plot'} }
+        layout={ {width: 500, height: 340, title: 'Data Visualisation'} }
       />
 
  </div>
