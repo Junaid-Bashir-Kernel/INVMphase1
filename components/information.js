@@ -28,7 +28,22 @@ return (
    </tr>
   </tbody>
  </table>
+ <p className="p-1 my-1 alert-warning">Sold categories</p>
+   <div className="row row-cols-1 row-cols-md-4  g-4">
+  
+    {data.Scategory.map(obj=>(
+     <>
+     <center>
+     <p className="col" style={{fontFamily:"verdana",color:"orangered"}}>{obj}</p>
+     <hr/>
+     </center>
+   
+     </>
+    ))
 
+    }
+
+   </div>
 </div>
 )
 

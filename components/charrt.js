@@ -13,7 +13,7 @@ return (
           
           {
             values: [obj.itemsininventory,obj.itemssold],
-            labels: ['Inventory', 'Sold'],
+            labels: ['Inventory', 'Sold','Sold Categories'],
             type: 'pie'
           },
           
